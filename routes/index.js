@@ -1,12 +1,19 @@
-const express = require("express");
-const router = express.Router();
+const express = require("express"); 
 
-//pagina inicial
-router.get("/", async (req, res) => {
-    res.render ("base", {
-        title: "Pagina Inicial",
-        view: "index"
-    });
-});
+const router = express.Router(); 
 
-module.exports = router
+// Rota para a página inicial 
+
+router.get("/", (req, res) => { 
+
+  res.render("base", { 
+
+    title: "Home", 
+
+    view: "index", // Passa a view 'index.ejs' para ser carregada no body 
+
+  }); 
+
+}); 
+
+module.exports = router;
